@@ -13,10 +13,10 @@ Here what it looks like
 
   "Insert images of drone + controller" like the newer one that Nehal and David are making
 
-<img width="1430" height="818" alt="image" src="https://github.com/user-attachments/assets/2e4eba97-9438-42be-9859-b396d850de8b" />
+<img width="1075 " height="204" alt="image" src="https://github.com/user-attachments/assets/2e4eba97-9438-42be-9859-b396d850de8b" />
 
 
-<img width="1376" height="824" alt="image" src="https://github.com/user-attachments/assets/1c82aa69-c160-4e0f-89f8-95569180703b" />
+<img width="1075 " height="204" alt="image" src="https://github.com/user-attachments/assets/1c82aa69-c160-4e0f-89f8-95569180703b" />
 
 
 Note we need a digital model for the Design Submission
@@ -28,7 +28,7 @@ Here is our PCB
 
 "Insert images of PCB" 
 
-<img width="1180" height="1166" alt="image" src="https://github.com/user-attachments/assets/b72392fc-953e-4e89-bdf2-7b4a1ed8ce41" />
+<img width="295 " height="291" alt="image" src="https://github.com/user-attachments/assets/b72392fc-953e-4e89-bdf2-7b4a1ed8ce41" />
 
 
 
