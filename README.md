@@ -30,7 +30,9 @@ Here is our PCB
 
 <img width="295 " height="291" alt="image" src="https://github.com/user-attachments/assets/b72392fc-953e-4e89-bdf2-7b4a1ed8ce41" />
 
+<img width="1180" height="1166" alt="image" src="https://github.com/user-attachments/assets/206e0c8b-09a9-4647-b330-0433f77592c1" />
 
+<img width="980" height="964" alt="image" src="https://github.com/user-attachments/assets/bd962a30-0ec0-42ff-9376-8fa4fabd7d9f" />
 
 This is the Schematic or as some calls it the wiring diagram
 
