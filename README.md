@@ -1,18 +1,7 @@
 # Hack-Club-Fallen-
 
 
-For a note we need to upload the corect photos as for this is the back bone of how it would look.
-
-What is this?
-  These are our files for the drone.
-
-Why did we make it?
-  The reason we wanted to make this so we can use a drone to pick up a medkit and fly it over for those in needing one.
-
-Here what it looks like
-
-  "Insert images of drone + controller" like the newer one that Nehal and David are making
-
+Our project is a delivery drone that can be used to transfer medical items or other items from one location to another. To use it you must control it via the controlled which uses joysticks to control its movements on all 3 axises and there is a button on the controller to open and close the drones claw to grab items. You will be able to see through the drones pov via the fpv camera installed in it. We made this because we wanted to build something cool, we have little to no prior knowledge of hardware and wanted to start with a challenge so we can attend hackathons in the future. This project serves as a way to learn as much as we can about hardware and build something we always wanted to, a drone.
 <img width="1075 " height="204" alt="image" src="https://github.com/user-attachments/assets/2e4eba97-9438-42be-9859-b396d850de8b" />
 
 
