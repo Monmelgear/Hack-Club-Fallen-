@@ -1,36 +1,80 @@
 
-Servo myservo;
+from machine import Pin, PWM
 
-const int ServoPin = 10;
-const int Open_Button = 12;
-const int Open_Close_Button = 13;
-//Change the servo pin to the pin we gonna use
+SIGNAL_PIN = 16
+ENABLE_PIN = 17
 
-// Do research for the preset sizes of the open and close positions of the servo thing
-const int open_position = 180;
-const int close_position = 0;
-const int nutral = 90
-// These are the sizes that im going to guess
-
-void setup() {
-    myservo.attach(ServoPin, 544, 2400);
-
-    pinMode(Open_Button, INPUT_PULLUP);
-    pinMode(Open_Close_Button, INPUT_PULLUP);
-}
-// im guessing that the open button is connected to the pin 12 and the open close button is connected to the pin 13
-void loop() {
-    if (digitalRead(Open_Button) == LOW) {
-        myservo.write(open_position);
-    }
-    delay(100);
-}
-
-    if (digitalRead(Open_Close_Button) == LOW) {
-        myservo.write(close_position);
-    }
-    delay(100);
+START_US = 1500
+STEP_US = 10
+MIN_US = 1300
+MAX_US = 1700
 
 
+def run():
+    enable = Pin(ENABLE_PIN, Pin.OUT, value=0)
 
-// wireing the buttons to the arduio
+    if not (0 < MIN_US <= START_US <= MAX_US < 20000 and STEP_US > 0):
+        raise ValueError("Check pulse limits, start pulse and step size")
+
+    pwm = PWM(Pin(SIGNAL_PIN))
+    pulse = None
+
+    try:
+        pwm.freq(50)
+        pwm.duty_u16(0)
+        print("Servo signal OFF.")
+        print("Commands: start, +, -, status, off, quit")
+
+        while True:
+            command = input("servo> ").strip().lower()
+
+            if command == "start":
+                if pulse is None:
+                    pulse = START_US
+                pwm.duty_ns(pulse * 1000)
+                enable.value(1)
+                print("Signal ON:", pulse, "us")
+
+            elif command in ("+", "-"):
+                if pulse is None:
+                    print("Type start first.")
+                    continue
+
+                step = STEP_US if command == "+" else -STEP_US
+                candidate = pulse + step
+
+                if not MIN_US <= candidate <= MAX_US:
+                    print("Limit reached. Pulse stays at", pulse, "us")
+                    continue
+
+                pwm.duty_ns(candidate * 1000)
+                pulse = candidate
+                print("Commanded pulse:", pulse, "us")
+
+            elif command == "status":
+                if pulse is None:
+                    print("Signal OFF")
+                else:
+                    print("Commanded pulse:", pulse, "us")
+
+            elif command == "off":
+                enable.value(0)
+                pwm.duty_u16(0)
+                pulse = None
+                print("Servo signal OFF")
+
+            elif command == "quit":
+                break
+
+            else:
+                print("Use start, +, -, status, off, or quit.")
+
+    finally:
+        enable.value(0)
+        pwm.duty_u16(0)
+        pwm.deinit()
+        print("Servo signal OFF")
+
+
+if __name__ == "__main__":
+    run()
