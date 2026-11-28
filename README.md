@@ -8,14 +8,18 @@ Our project is a delivery drone that can be used to transfer medical items or ot
 <img width="1075 " height="204" alt="image" src="https://github.com/user-attachments/assets/1c82aa69-c160-4e0f-89f8-95569180703b" />
 
 
-Note we need a digital model for the Design Submission
-**ahem VON
+## Drone assembly
 
+![Full drone assembly](Design%20Review/Drone%20assembly.png)
+
+Open the [editable FreeCAD project](Design%20Review/Drone%20assembly.FCStd) to inspect individual components and edit the camera shoe and PCB rails. The original camera head uses the strap adapter. The electronics and propeller blades are clearance models.
+
+[Blender source](Design%20Review/Drone%20assembly.blend) · [Assembly STEP archive](Design%20Review/Drone%20assembly.step.zip) · [Electronics view](Design%20Review/Electronics%20placement.png) · [Mounts and fit notes](Design%20Review/Design%20review.md) · [Bill of materials](Design%20Review/Project%20BOM.csv)
 
 Here is our PCB
 
 
-"Insert images of PCB" 
+[Editable KiCad project](PCB/Claw%20Board.kicad_pro) 
 
 <img width="295 " height="291" alt="image" src="https://github.com/user-attachments/assets/b72392fc-953e-4e89-bdf2-7b4a1ed8ce41" />
 
@@ -26,12 +30,12 @@ Here is our PCB
 This is the Schematic or as some calls it the wiring diagram
 
 
-"Insert images of Schematics or the wiring diagram"
+[Circuit schematic PDF](PCB/Schematic.pdf)
 
 
 
 
-*Not yet
+
 
 For a build submission, also:
 
