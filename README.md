@@ -1,40 +1,45 @@
-# Fallen medical delivery drone
+# Hack-Club-Fallen-
 
-We designed a radio-controlled quadcopter to pick up a lightweight mock medical kit, carry it across a demonstration area, and set it down. The pilot flies using a handheld radio and sees the view from the nose camera on a small monitor. We started this project to learn how to design a drone, from the printed frame to the electronics that operate its claw.
 
-![Assembled drone with its camera head, battery carrier and three-finger claw](Design%20Review/Drone%20assembly.png)
+Our project is a delivery drone that can be used to transfer medical items or other items from one location to another. To use it you must control it via the controlled which uses joysticks to control its movements on all 3 axises and there is a button on the controller to open and close the drones claw to grab items. You will be able to see through the drones pov via the fpv camera installed in it. We made this because we wanted to build something cool, we have little to no prior knowledge of hardware and wanted to start with a challenge so we can attend hackathons in the future. This project serves as a way to learn as much as we can about hardware and build something we always wanted to, a drone.
+<img width="1075 " height="204" alt="image" src="https://github.com/user-attachments/assets/2e4eba97-9438-42be-9859-b396d850de8b" />
 
-## Open the design
 
-| File | What you can see or edit |
-|---|---|
-| [FreeCAD assembly](Design%20Review/Drone%20assembly.FCStd) | All 67 components in position. The camera shoe and PCB rails have editable solid features. |
-| [Blender assembly](Design%20Review/Drone%20assembly.blend) · [Assembly STEP archive](Design%20Review/Drone%20assembly.step.zip) | Blender source and a CAD exchange copy. Unzip the STEP before importing it. |
-| [Electronics placement](Design%20Review/Electronics%20placement.png) · [Mounting notes](Design%20Review/Design%20review.md) | Internal layout, mounting hardware and fit checks. Purchased electronics are represented by approximate shapes. |
-| [Bill of materials](Design%20Review/Project%20BOM.csv) | Parts, quantities, estimated costs and supplier links. |
+<img width="1075 " height="204" alt="image" src="https://github.com/user-attachments/assets/1c82aa69-c160-4e0f-89f8-95569180703b" />
 
-## Three-finger claw
 
-One servo moves a rod and sliding collar. Three links connect the collar to the rounded fingers so they open and close together. The view below isolates the claw from the full assembly.
+## Drone assembly
 
-![Current claw with three linked fingers and their common sliding collar](Design%20Review/Three-finger%20claw.png)
+![Full drone assembly](Design%20Review/Drone%20assembly.png)
 
-[Claw base](Current%20STEP%20Files/Claw%20Base.step) · [Rounded finger](Current%20STEP%20Files/Rounded%20Finger.step) · [Finger link](Current%20STEP%20Files/Finger%20Link.step) · [Sliding collar](Current%20STEP%20Files/Sliding%20Collar.step)
+Open the [editable FreeCAD project](Design%20Review/Drone%20assembly.FCStd) to inspect individual components and edit the camera shoe and PCB rails. The original camera head uses the strap adapter. The electronics and propeller blades are clearance models.
 
-## Camera and board mounts
+[Blender source](Design%20Review/Drone%20assembly.blend) · [Assembly STEP archive](Design%20Review/Drone%20assembly.step.zip) · [Electronics view](Design%20Review/Electronics%20placement.png) · [Mounts and fit notes](Design%20Review/Design%20review.md) · [Bill of materials](Design%20Review/Project%20BOM.csv)
 
-The original camera head sits on a strap adapter. A printed shoe holds the camera inside the head, with openings for the lens and cable. Two identical printed rails support the custom PCB at its four mounting holes.
+Here is our PCB
 
-[Camera head](Camera%20Head%20CAD/Camera%20Head.step) · [Camera shoe — print one](Design%20Review/Camera%20shoe.stl) · [PCB rail — print two](Design%20Review/PCB%20rail.stl)
 
-## Claw control board
+[Editable KiCad project](PCB/Claw%20Board.kicad_pro) 
 
-The flight controller and its four ESCs control the motors. A separate custom board carries the Pico W for the claw servo. This top view shows the front copper, silkscreen and outline from the KiCad board file.
+<img width="295 " height="291" alt="image" src="https://github.com/user-attachments/assets/b72392fc-953e-4e89-bdf2-7b4a1ed8ce41" />
 
-![Top view of the custom claw PCB exported from KiCad](Design%20Review/Claw%20board.svg)
+<img width="1180" height="1166" alt="image" src="https://github.com/user-attachments/assets/206e0c8b-09a9-4647-b330-0433f77592c1" />
 
-[KiCad project](PCB/Claw%20Board.kicad_pro) · [Board layout](PCB/Claw%20Board.kicad_pcb) · [Schematic PDF](PCB/Schematic.pdf) · [Gerbers](PCB/gerbers.zip)
+<img width="980" height="964" alt="image" src="https://github.com/user-attachments/assets/bd962a30-0ec0-42ff-9376-8fa4fabd7d9f" />
 
-## Project status
+This is the Schematic or as some calls it the wiring diagram
 
-The mechanical assembly, electronics layout and PCB are available for design review. The repository includes a [MicroPython servo bench script](servo.cpp) and [flight-controller firmware notes](Firmware/Betaflight-README.md). The servo script accepts typed commands. Radio-switch operation, physical fit, camera visibility, claw grip and loaded flight still need verification on the built drone.
+
+[Circuit schematic PDF](PCB/Schematic.pdf)
+
+
+
+
+
+
+For a build submission, also:
+
+Link your demo video
+Add images of the final product
+
+
